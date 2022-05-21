@@ -1,5 +1,5 @@
 // Add console.log to check to see if our code is working.
-console.log("working geojson");
+console.log("working geojson2");
 // Create the map object with center and zoom level.
 
 
@@ -45,18 +45,12 @@ d3.json(torontoData).then(function(data) {
     console.log(data);
   // Creating a GeoJSON layer with the retrieved data.
   L.geoJSON(data,{
-    onEachFeature: function(feature, layer) {
-        layer.bindPopup("<h2>"+feature.properties.name+"</h2>");
-       
-  } 
-}).addTo(map);
-// Grabbing our GeoJSON data.
-/* L.geoJSON(sanFranAirport, {
-    // We turn each feature into a marker on the map.
-    pointToLayer: function(feature, latlng) {
-      console.log(feature);
-      return L.marker(latlng);
-    }
 
-  }).addTo(map); */
+   onEachFeature: function(feature, layer) {
+        layer.bindPopup("<h2>"+feature.properties.airline+"</h2>");
+       
+   }
+}).addTo(map);
+
+
 });

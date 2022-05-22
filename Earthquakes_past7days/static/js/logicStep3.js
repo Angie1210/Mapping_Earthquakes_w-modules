@@ -46,7 +46,7 @@ function styleInfo(feature) {
     return {
       opacity: 1,
       fillOpacity: 1,
-      fillColor: "#ffae42",
+      fillColor: ,
       color: "#000000",
       radius: getRadius(feature.properties.mag),
       stroke: true,

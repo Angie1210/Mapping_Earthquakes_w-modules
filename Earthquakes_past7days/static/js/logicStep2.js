@@ -68,12 +68,12 @@ function getRadius(magnitude) {
 d3.json(earthqueakes).then(function(data) {
   // Creating a GeoJSON layer with the retrieved data.
   L.geoJSON(data,{
-    style: styleInfo(feature),
+    
     pointToLayer: function(feature, latlng) {
         console.log(data)    
         return L.circleMarker(latlng);
 
   },
-    
+  style: styleInfo
  } ).addTo(map);
 });

@@ -24,8 +24,8 @@ attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap
 //dark.addTo(map);   these 2 will be added in anew variable called base layer
 // Create a base layer that holds both maps.
 let baseMaps = {
-    Streets: streets,
-    Satellite: satelliteStreets
+    "Streets": streets,
+    "Satellite": satelliteStreets
   };
 
 // Create the map object with center, zoom level and default layer.

@@ -31,24 +31,24 @@ let baseMaps = {
   };
 
 // Create the earthquake layer for our map.
-let earthquakes = new L.layerGroup();
+let earthquakes = new L.LayerGroup();
 
 // We define an object that contains the overlays.
 // This overlay will be visible all the time.
 let overlays = {
     Earthquakes: earthquakes
   };
-
-// Then we add a control to the map that will allow the user to change
-// which layers are visible.
-L.control.layers(baseMaps, overlays).addTo(map);
-
 // Create the map object with center, zoom level and default layer.
 let map = L.map('mapid', {
     center: [39.5,-98.5],
     zoom: 3,
     layers: [streets]
 });
+// Then we add a control to the map that will allow the user to change
+// which layers are visible.
+L.control.layers(baseMaps, overlays).addTo(map);
+
+
 
 
 let earthqueakes = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
